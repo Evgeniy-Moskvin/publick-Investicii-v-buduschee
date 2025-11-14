@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<link rel="stylesheet" href="./css/main.min.css">
+<link rel="stylesheet" href="./css/main.min.css?v=2">
 </head>
 <body class="page">
 
@@ -809,10 +809,177 @@
     </div>
 </footer>
 
-<div id="demo" style="display: none">
-    <img src="./img/temp-popup.png" alt="img">
+<div id="demo" class="modal-donation">
+    <button type="button" aria-label="Закрыть окно" data-fancybox-close class="modal-donation__close">
+        <svg class="modal-donation__close-icon">
+            <use href="./img/sprite.svg#close"></use>
+        </svg>
+    </button>
+
+    <div class="modal-donation__main">
+        <h2 class="title modal-donation__title">Сделать пожертвование</h2>
+        <p class="modal-donation__text">
+            Вы можете поддержать фонд прямо сейчас, сделав пожертвование на любую сумму.<br>
+            Все отчёты о расходовании средств и результаты проектов доступны на нашем сайте: мы работаем максимально прозрачно.<br>
+            Особое значение имеют <strong>регулярные пожертвования</strong>. Они позволяют планировать программы и обеспечивать постоянную поддержку детям, семьям и спортивным инициативам.
+        </p>
+    </div>
+
+    <div class="modal-donation__block modal-donation__block--main">
+        <p class="modal-donation__heading">Тип пожертвования</p>
+
+        <div class="modal-donation__donation-row">
+            <div class="modal-donation__donation-col">
+                <label>
+                    <input type="radio" name="type" data-panel="panel-form" class="visually-hidden modal-donation__radio-type" checked="checked">
+                    <span type="button" class="button button--fluid button--theme--light">
+                        <span class="button__text">Ежемесячное пожертвование</span>
+                    </span>
+                </label>
+            </div>
+            <div class="modal-donation__donation-col">
+                <label>
+                    <input type="radio" name="type" data-panel="panel-form" class="visually-hidden modal-donation__radio-type">
+                    <span type="button" class="button button--fluid button--theme--light">
+                        <span class="button__text">Разовое пожертвование</span>
+                    </span>
+                </label>
+            </div>
+            <div class="modal-donation__donation-col">
+                <label>
+                    <input type="radio" name="type" data-panel="panel-requisites" class="visually-hidden modal-donation__radio-type">
+                    <span type="button" class="button button--fluid button--theme--light">
+                        <span class="button__text">Реквизиты для юр. лиц</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-form" class="modal-donation__panel modal-donation__panel--active">
+        <div class="modal-donation__block">
+        <p class="modal-donation__heading">Размер пожертвования</p>
+
+        <div class="modal-donation__donation-sum-row">
+            <label>
+                <label>
+                    <input type="radio" name="sum" class="visually-hidden modal-donation__radio-sum" checked="checked">
+                    <span type="button" class="button button--fluid button--theme--light button--theme--light-hover-secondary">
+                        <span class="button__text">300 ₽</span>
+                    </span>
+                </label>
+            </label>
+
+            <label>
+                <label>
+                    <input type="radio" name="sum" class="visually-hidden modal-donation__radio-sum">
+                    <span type="button" class="button button--fluid button--theme--light button--theme--light-hover-secondary">
+                        <span class="button__text">500 ₽</span>
+                    </span>
+                </label>
+            </label>
+
+            <label>
+                <label>
+                    <input type="radio" name="sum" class="visually-hidden modal-donation__radio-sum">
+                    <span type="button" class="button button--fluid button--theme--light button--theme--light-hover-secondary">
+                        <span class="button__text">1 000 ₽</span>
+                    </span>
+                </label>
+            </label>
+
+            <label>
+                <label>
+                    <input type="radio" name="sum" class="visually-hidden modal-donation__radio-sum">
+                    <span type="button" class="button button--fluid button--theme--light button--theme--light-hover-secondary">
+                        <span class="button__text">3 000 ₽</span>
+                    </span>
+                </label>
+            </label>
+
+            <label>
+                <label>
+                    <input type="radio" name="sum" class="visually-hidden modal-donation__radio-sum">
+                    <span type="button" class="button button--fluid button--theme--light button--theme--light-hover-secondary">
+                        <span class="button__text">5 000 ₽</span>
+                    </span>
+                </label>
+            </label>
+
+            <label>
+                <label>
+                    <input type="radio" name="sum" class="visually-hidden modal-donation__radio-sum">
+                    <span type="button" class="button button--fluid button--theme--light button--theme--light-hover-secondary">
+                        <span class="button__text">10 000 ₽</span>
+                    </span>
+                </label>
+            </label>
+
+            <label>
+                <label>
+                    <input type="radio" name="sum" class="visually-hidden modal-donation__radio-sum">
+                    <span type="button" class="button button--fluid button--theme--light button--theme--light-hover-secondary">
+                        <span class="button__text">Своя сумма ₽</span>
+                    </span>
+                </label>
+            </label>
+        </div>
+    </div>
+
+        <div class="modal-donation__block">
+            <p class="modal-donation__heading">Ваши данные</p>
+
+            <form class="form">
+                <div class="form__row">
+                    <label class="form__group">
+                        <input type="text" name="name" placeholder="Ваше имя" class="input">
+                    </label>
+                    <label class="form__group">
+                        <input type="email" name="email" placeholder="E-mail" class="input">
+                    </label>
+                    <a href="qr.html" class="button">
+                        <span class="button__text">Пожертвовать</span>
+                    </a>
+                </div>
+
+                <div class="form__agreement">
+                    <label class="custom-checkbox form__agreement-checkbox">
+                        <input type="checkbox" name="agree" class="visually-hidden custom-checkbox__input">
+                        <span class="custom-checkbox__custom">
+                            <svg class="custom-checkbox__icon">
+                                <use href="./img/sprite.svg#check"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <p class="form__agreement-text">Даю согласие на обработку персональных данных</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="panel-requisites" class="modal-donation__panel">
+        <div class="modal-donation__block">
+        <p class="modal-donation__heading">Реквизиты для пожертвования</p>
+        <p class="modal-donation__text">
+            Наименование: БФ «ПРЕДПРИНИМАТЕЛИ ПАТРИОТЫ» <br>
+            ИНН: 5024247599 <br>
+            КПП: 502401001 <br>
+            ОГРН: 1245000113973 <br>
+            Расчётный счёт: 40703810540000401563<br>
+            Наименование: <br>
+            ПАО Сбербанк <br>
+            БИК: 044525225<br>
+            Корсчёт: 30101810400000000225<br>
+            ИНН: 7707083893<br>
+            КПП: 773643002 <br>
+            Дата открытия: 18.10.2024 <br>
+            Адрес обслуживающего подразделения: г. Красногорск, ул. Ленина, д. 35б <br>
+            Назначение платежа: Благотворительное пожертвование. НДС не облагается.
+        </p>
+    </div>
+    </div>
 </div>
 
-<script src="./js/main.min.js"></script>
+<script src="./js/main.min.js?v2"></script>
 </body>
 </html>
